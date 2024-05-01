@@ -1,0 +1,331 @@
+*{
+     margin: 0px;
+     padding: 0px;
+     box-sizing: border-box;
+}
+html,body{
+     height: 100%;
+     width: 100%;
+}
+
+.mainframe{
+     height: 100%;
+     width: 100%;
+     background-color: rgb(12,19,23);
+     padding: 19px;
+     display: flex; 
+}
+
+.leftframe{
+     height: 100%;
+     width: 30%;
+     background-color:rgb(17,27,33);
+     
+
+}
+.leftframe .left-header{
+    height: 110px;
+    background-color: rgb(17,27,33);
+}
+.leftframe .left-header .header-profile{
+     height: 60px;
+     background-color: rgb(32,44,51);
+     padding: 8px 15px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+}
+.leftframe .left-header .header-profile .profileimg{
+     height: 40px;
+     width: 40px;
+     background-color: black;
+     border-radius: 50%;
+}
+.leftframe .left-header .header-profile .profileimg img{
+     height: 100%;
+     width: 100%;
+     object-fit: cover;
+     border-radius: 50%;
+}
+ .headericon i{
+
+     color: rgb(162, 172, 180);
+     font-size: 22px;
+     padding: 12px;
+     font-weight: 100;
+}
+.leftframe .left-header .leftsearch{
+     height: 48px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 12px;
+}
+.leftsearch i{
+     color: rgb(162, 172, 180);
+     font-size: 20px;
+}
+.search{
+     width: 89%;
+     height: 37px;
+     display: flex;
+     justify-content: space-between;
+     padding: 0px 15px;
+     border-radius: 10px;
+     align-items: center;
+     gap: 30px;
+     background-color: rgb(32,44,51);
+}
+.search i{
+     font-size: 14px;
+}
+.search input{
+     height: 100%;
+     width: 100%;
+     background-color: transparent;
+     outline: none;
+     border: none;
+     font-size: 14px;
+     color: white;
+}
+.search input::placeholder{
+     color: rgb(122, 135, 136);
+     font-size: 14px;
+}
+
+.left-contacts{
+     height: calc(100% - 110px);
+     color: white;
+     overflow-y: auto;
+     /* background-color: red; */
+
+}
+.left-contacts{
+     /* scrollbar-width:thin; */
+    /* scrollbar-color: rgb(109, 109, 109) rgb(17,27,33) ; */
+}
+.left-contacts::-webkit-scrollbar{
+     width: 4px !important;
+     background-color: rgb(122, 135, 136);
+}
+.left-contacts::-webkit-scrollbar-thumb{
+     background-color: rgb(17,27,33);
+}
+
+
+.user{
+     height: 70px;
+     padding: 0px 15px;
+     /* background-color: rgb(48, 48, 48); */
+     display: flex;
+     align-items: center;
+     gap: 18px;
+}
+.user:hover{
+     background-color: rgb(32, 44, 51);
+}
+.userprofile{
+     height: 60px;
+     width: 60px;
+     border-radius: 50%;
+     
+}
+.userprofile img{
+     height: 100%;
+     width: 100%;
+     border-radius: 50%;
+     object-fit: contain;
+}
+.usermessage{
+     width: calc(100% - 60px);
+     /* height: 65px; */
+     height: 100%;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     border-bottom: 0.5px solid rgb(32, 44, 51);
+}
+.usermessage .username span{
+     font-size: 16px;
+     font-family: sans-serif;
+}
+.usermessage .username p{
+     margin-top: 5px;
+     color: rgb(124, 140, 150);
+}
+.usermessage .time{
+     /* height: 50px; */
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     align-items: center;
+}
+.usermessage .time p{
+color: rgb(0, 168, 132);
+}
+.usermessage .time span{
+     
+     border-radius: 50%;
+     padding: 3px 6px;
+     /* border-radius: 30px; */
+     font-family: sans-serif;
+     font-size: 15px;
+     margin-top: 10px;
+     color: rgb(44, 44, 44);
+     background-color: rgb(0, 168, 132);
+}
+
+.rightframe{
+     height: 100%;
+     position: relative;
+     width: calc( 70% - 1px );
+     /* background-color: rgb(32,44,51); */
+     border-left: 1px solid  rgb(62, 76, 85);
+}
+.rightframe .rightheader{
+     height: 60px;
+     width: 100%;
+     background-color: rgb(32, 44, 51);
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 0px 15px;
+     color: rgb(232,233,229);
+}
+.rightprofile{
+     display: flex;
+     width: max-content;
+     gap: 15px;
+     align-items: center;
+}
+.rightheader .profile{
+     height: 40px;
+     width: 40px;
+     border-radius: 50%;
+}
+.profile img{
+     height: 100%;
+     width: 100%;
+     object-fit: cover;
+     border-radius: 50%;
+}
+.userstatus p{
+     color: rgb(122, 135, 136);
+}
+
+.rightframe .messagesection{
+     height: calc(100% - 60px);
+     width: 100%;
+     background-color: rgb(11,20,26);
+     position: relative;
+     z-index: 1;
+     /* background-repeat: no-repeat; */
+}
+.messagesection .messagebg{
+     position: absolute;
+     top: 0px;
+     height: 100%;
+     width: 100%;
+     background: url("./whatsapp bg.png");
+     background-position: center;
+     background-size:500px;
+     opacity: 0.3;
+     filter:brightness(30%) grayscale(100%);
+     z-index: -1;
+}
+.message{
+     height:calc(100% - 65px);
+     padding: 5px 35px;
+     /* background-color: red; */
+     color: rgb(232,233,229);
+     /* display: flex; */
+     /* flex-direction: column; */
+     /* align-items:center; */
+}
+.message .usermsg,.message .yourmsg,.message .datetime{
+     
+     padding: 10px 15px;
+     border-radius: 6px;
+     width: max-content;
+     display: block;
+}
+.usermsg{
+     
+     position: relative;
+     background: rgb(32, 44, 51);
+}
+.datetime{
+     position: relative;
+     width:max-content;
+     display: block;
+     width: 100%;
+     background-color: rgb(32, 44, 51);
+     left: 50%;
+     padding: 6px 12px !important;
+     transform: translate(-50%);
+
+}
+.yourmsg{
+     position: relative;
+     right: -830px;
+     background-color: rgb(0, 92, 75);
+}
+   .message .yourmsg::after{
+     content: '';
+     position: absolute;
+     visibility: visible;
+     top: 0px;
+     right: -8px;
+     border: 10px solid transparent;
+     border-top: 10px solid rgb(0, 92, 75);
+     clear: both;
+   }
+   .usermsg::before {
+     content: '';
+     position: absolute;
+     visibility: visible;
+     top: 0px;
+     left: -8px;
+     border: 10px solid transparent;
+     border-top: 10px solid rgb(32, 44, 51);
+     clear: both;
+     
+   }
+   .sender{
+     background-color: rgb(32, 44, 51);
+     height: 65px;
+     display: flex;
+     align-items: center;
+     gap: 15px;
+     justify-content: center;
+     /* text-align: center; */
+   }
+   .senderbox{
+
+        width: 90%;
+        background-color: rgb(45, 61, 69);
+        height: 45px;
+        padding: 0px 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border-radius: 10px;
+   }
+
+   .senderbox input{
+      border: none;
+      outline: none;
+      width: 100%;
+      /* padding: 15px 0px; */
+      font-size: 16px;
+      color: white;
+      background-color: transparent;
+   }
+   .senderbox input::placeholder{
+     color: rgb(122, 135, 136);
+   }
+   .sender i{
+font-size: 26px !important;
+color: rgb(124, 140, 150);
+
+   }
